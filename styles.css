@@ -1,0 +1,155 @@
+:root {
+    --bg: #0a061a;
+    --violet-main: #8a5cff;
+    --violet-light: #b892ff;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text: rgba(255,255,255,0.9);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: Inter, sans-serif;
+    color: var(--text);
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Radial glow */
+.hero-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(60% 40% at 50% 30%, rgba(138,92,255,0.6), transparent 60%),
+        radial-gradient(40% 60% at 50% 70%, rgba(109,65,255,0.4), transparent 70%);
+    filter: blur(55px);
+    z-index: 1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* HERO TEXT */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    margin-top: 120px;
+}
+
+.tag {
+    color: var(--violet-light);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-family: Poppins, sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.sub {
+    font-size: 17px;
+    opacity: 0.85;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.section-title h2 {
+    font-family: Poppins;
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.desc {
+    opacity: 0.8;
+}
+
+/* GRID */
+.grid {
+    max-width: 1300px;
+    margin: 80px auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 18px 40px rgba(0,0,0,0.6);
+    color: white;
+}
+
+/* Big cards */
+.big {
+    grid-column: span 2;
+}
+
+/* Small cards */
+.small {
+    grid-column: span 1;
+}
+
+.circle-clock {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(135deg, #8a5cff, #b892ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 50px;
+    color: rgba(255,255,255,0.6);
+}
